@@ -25,12 +25,17 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					DEFAULT: '#0066FF',
+					foreground: '#FFFFFF'
 				},
 				secondary: {
-					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))'
+					DEFAULT: '#1A1A2E',
+					foreground: '#FFFFFF'
+				},
+				gaming: {
+					blue: '#0066FF',
+					dark: '#1A1A2E',
+					accent: '#66213E'
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
@@ -84,11 +89,33 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 20px rgba(0, 102, 255, 0.5)'
+					},
+					'50%': {
+						boxShadow: '0 0 30px rgba(0, 102, 255, 0.8)'
+					}
+				},
+				'pulse-glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 5px rgba(0, 102, 255, 0.5), inset 0 0 20px rgba(0, 102, 255, 0.1)'
+					},
+					'50%': {
+						boxShadow: '0 0 15px rgba(0, 102, 255, 0.8), inset 0 0 30px rgba(0, 102, 255, 0.2)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'glow': 'glow 2s ease-in-out infinite',
+				'pulse-glow': 'pulse-glow 3s ease-in-out infinite'
+			},
+			fontFamily: {
+				'orbitron': ['Orbitron', 'monospace'],
+				'roboto': ['Roboto', 'sans-serif']
 			}
 		}
 	},
